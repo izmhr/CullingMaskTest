@@ -61,7 +61,7 @@ public class CullingMaskTest : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             Debug.Log("Layer Reset (Everything)");
-            camera.cullingMask = -1;
+            camera.cullingMask = -1;    // -1 は int (= System.Int32) の 32bit すべてが 1で埋まった最大値であり、つまりすべてのレイヤーが ON の状態を意味する。
         }
     }
 
